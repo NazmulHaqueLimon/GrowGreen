@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GrowGreen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="a11y_plant_item_image">picture of plants</string>
+    <string name="page_title">Grow-Green</string>
+</resources>
