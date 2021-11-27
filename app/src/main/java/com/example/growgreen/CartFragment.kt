@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.growgreen.databinding.FragmentCartBinding
 import com.example.growgreen.databinding.FragmentProductsBinding
 
@@ -37,8 +38,10 @@ class CartFragment : Fragment() {
 
     }
 
+
     private fun deleteItem(it: MyProducts) {
         viewModel.removeCart(it)
+        findNavController().navigateUp()
     }
 
 }
