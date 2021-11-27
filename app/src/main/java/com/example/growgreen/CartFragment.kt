@@ -21,13 +21,20 @@ class CartFragment : Fragment() {
             lifecycleOwner =viewLifecycleOwner
         }
 
-        val adapter =ProductAdapter()
-        binding.plantList.adapter =adapter
-        //adapter.submitList()
-        viewModel.myCarts
+        val adapter =CartsAdapter{
+            deleteItem(it)
+        }
+        binding.cartList.adapter =adapter
+        viewModel.carts.let {
+            adapter.submitList(it)
+        }
 
         return binding.root
 
+    }
+
+    private fun deleteItem(it: MyProducts) {
+        viewModel.carts.remove(it)
     }
 
 }

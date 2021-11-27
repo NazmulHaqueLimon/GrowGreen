@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable-v24/ic_trash__1_.xml" value="0.3828125" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/add_to_cart.xml" value="0.26296296296296295" />
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_add_circle_outline_24.xml" value="0.3828125" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_grass_24.xml" value="0.2759259259259259" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_menu_24.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_park_20.xml" value="0.26296296296296295" />
@@ -11,10 +13,11 @@
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_yard_20.xml" value="0.2759259259259259" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/drawable/outline_yard_24.xml" value="0.2759259259259259" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/activity_main.xml" value="0.3484375" />
-        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/fragment_cart.xml" value="0.3625" />
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/fragment_cart.xml" value="0.2608695652173913" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/fragment_products.xml" value="0.25" />
-        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/item_category.xml" value="0.30416666666666664" />
-        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/list_item_plant.xml" value="0.2760416666666667" />
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/item_category.xml" value="0.33" />
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/list_item_carts.xml" value="0.25297619047619047" />
+        <entry key="..\:/Users/User/GrowGreen/app/src/main/res/layout/list_item_plant.xml" value="0.22" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/menu/top_app_bar.xml" value="0.3625" />
         <entry key="..\:/Users/User/GrowGreen/app/src/main/res/mipmap-anydpi-v26/ic_launcher_cart_round.xml" value="0.29444444444444445" />

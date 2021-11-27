@@ -5,9 +5,6 @@
 
     <data>
         <variable
-            name="clickListener"
-            type="android.view.View.OnClickListener"/>
-        <variable
             name="product"
             type="com.example.growgreen.Product"/>
     </data>
@@ -18,19 +15,19 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
-        android:onClick="@{clickListener}"
         app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.Sunflower.Card">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#B2F6B5">
 
             <ImageView
                 android:id="@+id/plant_item_image"
                 android:layout_width="0dp"
-                android:layout_height="95dp"
+                android:layout_height="100dp"
                 android:contentDescription="@string/a11y_plant_item_image"
                 android:scaleType="centerCrop"
                 android:src="@{product.img}"
@@ -42,16 +39,61 @@
                 android:id="@+id/plant_item_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
                 android:text="@{product.productName}"
                 android:textAppearance="?attr/textAppearanceListItem"
-                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/plant_item_image"
+                tools:text="Indoor Plants" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/price"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:text="Indoor Plants"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plant_item_title">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{Integer.toString(product.price)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/plant_item_title">
+
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/cart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/outline_add_shopping_cart_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plant_item_title"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                android:contentDescription="@string/todo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -7,12 +7,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.growgreen.databinding.ListItemPlantBinding
 
-class ProductAdapter :ListAdapter<Product,RecyclerView.ViewHolder>(ProductDiffUtilCallback()) {
+class ProductAdapter(private val onClick: (Product) -> Unit) :ListAdapter<Product,RecyclerView.ViewHolder>(ProductDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return PlantViewHolder(
-            ListItemPlantBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-
+            ListItemPlantBinding.inflate(
+                LayoutInflater.from(parent.context),parent,false
+            ), onClick
         )
     }
 
@@ -24,10 +25,19 @@ class ProductAdapter :ListAdapter<Product,RecyclerView.ViewHolder>(ProductDiffUt
 
 
     class PlantViewHolder(
-        private val binding: ListItemPlantBinding
+        private val binding: ListItemPlantBinding,
+        val onClick: (Product) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
+        var currentProduct :Product?=null
+        init {
+            binding.cart.setOnClickListener {
+                currentProduct?.let { it1 -> onClick(it1) }
+            }
+        }
 
         fun bind(item: Product) {
+            currentProduct =item
+
             binding.apply {
                 product = item
                 executePendingBindings()

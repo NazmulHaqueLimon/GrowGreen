@@ -4,4 +4,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="a11y_plant_item_image">picture of plants</string>
     <string name="page_title">Grow-Green</string>
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="price">Price :</string>
+    <string name="plant_name">plant name</string>
+    <string name="todo">TODO</string>
+    <string name="plant_image">plantImage</string>
+    <string name="delete">Delete</string>
+    <string name="quantity">Quantity</string>
+    <string name="plus">plus</string>
+    <string name="minus">minus</string>
+    <string name="list_of_your_selected_items">List Of your Selected Items :</string>
 </resources>

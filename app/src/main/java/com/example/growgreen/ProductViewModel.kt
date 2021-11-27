@@ -6,6 +6,15 @@ import androidx.lifecycle.ViewModel
 
 class ProductViewModel:ViewModel() {
 
-    val _myCarts =MutableLiveData<List<Product>>()
-    val myCarts :LiveData<List<Product>> =_myCarts
+    val carts = mutableListOf<MyProducts>()
+
+    val _category =MutableLiveData<String>("A")
+    val category :LiveData<String> =_category
+
+    fun setCategory(id :String){
+        _category.value =id
+    }
+    fun addToCart(plant: MyProducts){
+        carts.add(plant)
+    }
 }

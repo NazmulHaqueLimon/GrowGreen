@@ -13,10 +13,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/ic_launcher_cart_background"
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/category_id"
+                android:id="@+id/categoryList"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"

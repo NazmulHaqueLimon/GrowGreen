@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.growgreen.databinding.ItemCategoryBinding
 
-class CategoryAdapter :ListAdapter<Category,RecyclerView.ViewHolder>(CategoryDiffUtilCallback()) {
+
+class CategoryAdapter(private val onClick: (Category) -> Unit)  :ListAdapter<Category,RecyclerView.ViewHolder>(CategoryDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return CategoryViewHolder(
-            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+            ItemCategoryBinding.inflate(LayoutInflater.from(parent.context),parent,false
+            ),onClick
         )
     }
 
@@ -24,10 +26,19 @@ class CategoryAdapter :ListAdapter<Category,RecyclerView.ViewHolder>(CategoryDif
 
 
     class CategoryViewHolder(
-        private val binding:  ItemCategoryBinding
+        private val binding:  ItemCategoryBinding,
+        private val onClick: (Category) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        var currentCategory :Category?=null
+        init {
+            binding.categoryContainer.setOnClickListener {
+                currentCategory?.let { it1 -> onClick(it1) }
+            }
+        }
+
         fun bind(item: Category) {
+            currentCategory =item
             binding.apply {
                 category = item
                 executePendingBindings()
