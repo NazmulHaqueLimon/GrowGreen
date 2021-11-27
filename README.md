@@ -11,4 +11,15 @@ LiveData
 
 ViewModel
 
-#
+
+#Features:
+
+#Bottom Navigation Bar
+
+#AppBar
+
+#Product Filtering with categories
+
+#Add to cart functionality
+
+#Cart items list
