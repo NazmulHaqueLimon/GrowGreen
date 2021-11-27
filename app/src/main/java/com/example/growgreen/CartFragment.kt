@@ -25,16 +25,17 @@ class CartFragment : Fragment() {
             deleteItem(it)
         }
         binding.cartList.adapter =adapter
-        viewModel.carts.let {
+        viewModel.cartLiveData.observe(viewLifecycleOwner,{
             adapter.submitList(it)
-        }
+        })
+
 
         return binding.root
 
     }
 
     private fun deleteItem(it: MyProducts) {
-        viewModel.carts.remove(it)
+        viewModel.removeCart(it)
     }
 
 }
