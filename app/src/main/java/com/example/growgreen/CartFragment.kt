@@ -19,6 +19,7 @@ class CartFragment : Fragment() {
     ): View {
         binding= FragmentCartBinding.inflate(inflater,container,false).apply {
             lifecycleOwner =viewLifecycleOwner
+            viewModels =viewModel
         }
 
         val adapter =CartsAdapter{
@@ -28,6 +29,8 @@ class CartFragment : Fragment() {
         viewModel.cartLiveData.observe(viewLifecycleOwner,{
             adapter.submitList(it)
         })
+
+        viewModel.calculateTotalPrice()
 
 
         return binding.root

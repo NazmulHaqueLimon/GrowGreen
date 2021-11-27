@@ -15,4 +15,5 @@
     <string name="plus">plus</string>
     <string name="minus">minus</string>
     <string name="list_of_your_selected_items">List Of your Selected Items :</string>
+    <string name="total_tk">Total(tk) :</string>
 </resources>
