@@ -2,4 +2,13 @@
 an e comerce app for selling gardening products
 
 #Library used :
-#Data Binding
+
+Data Binding
+
+Navigation Components
+
+LiveData
+
+ViewModel
+
+#
